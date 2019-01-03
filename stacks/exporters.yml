@@ -3,7 +3,7 @@ version: "3"
 services:
 
   ha-proxy:
-    image: quay.io/prometheus/haproxy-exporter:${HA_PROXY_TAG:-latest}
+    image: lukics/haproxy-exporter:armv7
     networks:
       - proxy
       - monitor
@@ -14,7 +14,7 @@ services:
     command: --haproxy.scrape-uri="http://admin:admin@proxy/admin?stats;csv"
 
   cadvisor:
-    image: google/cadvisor:${CADVISOR_TAG:-latest}
+    image: lukics/cadvisor:armv7
     networks:
       - monitor
     volumes:
@@ -29,7 +29,7 @@ services:
         - com.df.scrapePort=8080
 
   node-exporter:
-    image: basi/node-exporter:${NODE_EXPORTER_TAG:-v1.15.0}
+    image: lukics/node-exporter:armv7
     networks:
       - monitor
     environment:
