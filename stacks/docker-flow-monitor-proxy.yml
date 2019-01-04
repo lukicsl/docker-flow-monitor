@@ -16,7 +16,7 @@ services:
         constraints: [node.role == manager]
 
   monitor:
-    image: dockerflow/docker-flow-monitor:${TAG:-latest}
+    image: lukics/docker-flow-monitor:armv7
     environment:
       - LISTENER_ADDRESS=swarm-listener
       - GLOBAL_SCRAPE_INTERVAL=${SCRAPE_INTERVAL:-10s}
@@ -34,7 +34,7 @@ services:
         - com.df.port=9090
 
   grafana:
-    image: grafana/grafana:${GRAFANA_TAG:-4.5.2}
+    image: lukics/grafana:5.4.2
     networks:
       - monitor
       - proxy
