@@ -1,7 +1,7 @@
 version: "3"
 services:
   monitor:
-    image: lukics/docker-flow-monitor:${TAG:-latest}
+    image: lukics/docker-flow-monitor:armv7
     environment:
       - GLOBAL_SCRAPE_INTERVAL=10s
     networks:
