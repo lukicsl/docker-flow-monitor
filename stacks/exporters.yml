@@ -14,7 +14,7 @@ services:
     command: --haproxy.scrape-uri="http://admin:admin@proxy/admin?stats;csv"
 
   cadvisor:
-    image: lukics/cadvisor:armv7
+    image: lukics/cadvisor:linux-arm64v8-latest
     networks:
       - monitor
     volumes:
