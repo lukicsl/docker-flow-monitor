@@ -3,7 +3,7 @@ version: "3"
 services:
 
   ha-proxy:
-    image: lukics/haproxy-exporter:armv7
+    image: lukics/haproxy-exporter:linux-arm32v7-latest
     networks:
       - proxy
       - monitor
@@ -29,7 +29,7 @@ services:
         - com.df.scrapePort=8080
 
   node-exporter:
-    image: lukics/node-exporter:armv7
+    image: lukics/node-exporter:linux-arm32v7-latest
     networks:
       - monitor
     environment:
