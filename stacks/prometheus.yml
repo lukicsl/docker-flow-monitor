@@ -3,6 +3,6 @@ version: "3"
 services:
 
   prometheus:
-    image: prom/prometheus:${TAG:-latest}
+    image: lukics/prometheus:${TAG:-latest}
     ports:
       - 9090:9090
