@@ -12,6 +12,8 @@ services:
     ports:
       - 80:80
       - 443:443
+      - 9125:9125
+      - 9126:9126
     networks:
       - proxy
     environment:
