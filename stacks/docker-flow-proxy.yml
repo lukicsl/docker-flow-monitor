@@ -22,7 +22,6 @@ services:
       - CONNECTION_MODE=${CONNECTION_MODE:-http-server-close}
       - STATS_USER=admin
       - STATS_PASS=admin
-      - BIND_PORTS=9125,9126
 
   swarm-listener:
     image: dockerflow/docker-flow-swarm-listener
